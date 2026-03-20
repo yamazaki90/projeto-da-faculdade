@@ -1,0 +1,45 @@
+# ══════════════════════════════════════════════
+#  ABRE & REZA — Makefile (Windows / MinGW + MySQL)
+#
+#  Pré-requisitos:
+#    - MinGW-w64 com gcc no PATH
+#    - MySQL Connector/C instalado
+#    - mongoose.c e mongoose.h na pasta raiz
+#
+#  Uso:
+#    mingw32-make         → compila
+#    mingw32-make run     → compila e roda
+#    mingw32-make clean   → remove arquivos gerados
+# ══════════════════════════════════════════════
+
+CC     = gcc
+TARGET = server.exe
+SRCS   = server.c mongoose.c
+
+# ── Caminho do MySQL Connector/C ──
+# Ajuste se instalou em outro diretório
+MYSQL_DIR = C:/Program Files/MySQL/MySQL Connector C 6.1
+
+# ── Includes e libs ──
+CFLAGS  = -Wall -Wextra -O2
+CFLAGS += -DMG_ENABLE_LINES=1
+CFLAGS += -I"$(MYSQL_DIR)/include"
+
+LDFLAGS = -L"$(MYSQL_DIR)/lib"
+LIBS    = -lmysql -lws2_32
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET) $(LDFLAGS) $(LIBS)
+	@echo.
+	@echo [OK] Compilado: $(TARGET)
+	@echo [>>] Lembre de rodar schema.sql no MySQL antes de iniciar!
+	@echo [>>] Para rodar: server.exe
+
+run: $(TARGET)
+	./$(TARGET)
+
+clean:
+	del /f $(TARGET) 2>nul || true
+	@echo [OK] Limpeza concluída

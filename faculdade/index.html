@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abre & Reza — Mystery Boxes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Abre<span>&</span>Reza</a>
+  <ul class="nav-links" id="navLinks">
+    <a href="#home">Home</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#produtos">Produtos</a>
+    <a href="#contato">Contato</a>
+  </ul>
+  <div style="display:flex; align-items:center; gap:14px;">
+    <div class="nav-cart" onclick="openCart()">
+      🛍️ Carrinho
+      <div class="cart-badge" id="cartBadge">0</div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-bg-orb orb1"></div>
+  <div class="home-bg-orb orb2"></div>
+
+  <div class="home-tag fade-up">✦ Mystery Boxes Premium</div>
+
+  <h1 class="home-title fade-up fade-up-delay-1">
+    <span class="line1">Abre</span><br>
+    <span class="line2">&amp; Reza</span><br>
+    <span class="line3">Surpresa!</span>
+  </h1>
+
+  <p class="home-desc fade-up fade-up-delay-2">
+    Vendemos mystery boxes cuidadosamente curadas com produtos surpresa de <strong>tecnologia</strong>, <strong>games</strong> e <strong>lifestyle</strong>. Cada caixa é uma experiência única.
+  </p>
+
+  <div class="home-actions fade-up fade-up-delay-3">
+    <a href="#produtos" class="btn-primary">🎁 Ver Produtos</a>
+    <a href="#sobre" class="btn-secondary">Nossa história →</a>
+  </div>
+
+  <div class="home-stats fade-up fade-up-delay-4">
+    <div class="stat-item">
+      <span class="stat-num">4.8★</span>
+      <span class="stat-label">Avaliação média</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">+12k</span>
+      <span class="stat-label">Caixas entregues</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Surpresa garantida</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">3 dias</span>
+      <span class="stat-label">Entrega rápida</span>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="section-header">
+    <div class="section-tag">✦ Quem somos</div>
+    <h2 class="section-title">A história por<br>trás da caixa</h2>
+  </div>
+
+  <div class="sobre-grid">
+    <div class="sobre-text">
+      <p>
+        A <strong>Abre & Reza</strong> nasceu em 2021 de uma ideia simples e poderosa: reimaginar o prazer de receber um presente. Tudo começou em um apartamento pequeno, com dois amigos obcecados por tecnologia e pela sensação única de abrir uma caixa sem saber o que vem por dentro.
+      </p>
+      <p>
+        O nome diz tudo: você <strong>abre</strong> a caixa, <strong>reza</strong> para ganhar algo incrível — e quase sempre ganha. Curadoria cuidadosa, produtos de verdade e uma dose generosa de sorte são a nossa fórmula.
+      </p>
+      <p>
+        Hoje somos uma empresa que une tecnologia, cultura gamer, lifestyle e aquela emoção de criança no Natal. Cada caixa é montada com carinho, e cada pedido é tratado como único.
+      </p>
+    </div>
+
+    <div class="missao-cards">
+      <div class="missao-card">
+        <div class="missao-icon">🎯</div>
+        <div>
+          <h4>Nossa Missão</h4>
+          <p>Surpreender clientes com produtos interessantes e experiências memoráveis. Cada caixa é uma história diferente.</p>
+        </div>
+      </div>
+      <div class="missao-card">
+        <div class="missao-icon">💎</div>
+        <div>
+          <h4>Curadoria Premium</h4>
+          <p>Selecionamos produtos com valor sempre acima do preço pago. Transparência e qualidade em cada envio.</p>
+        </div>
+      </div>
+      <div class="missao-card">
+        <div class="missao-icon">🚀</div>
+        <div>
+          <h4>Entrega Rápida</h4>
+          <p>Embalagem segura, rastreamento em tempo real e entrega em até 3 dias úteis para todo o Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+  <div class="produtos-header">
+    <div class="section-header" style="margin-bottom:0">
+      <div class="section-tag">✦ E-commerce</div>
+      <h2 class="section-title">Escolha sua<br>mystery box</h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filtrarProdutos('todos', this)">Todos</button>
+      <button class="filter-tab" onclick="filtrarProdutos('tech', this)">Tech</button>
+      <button class="filter-tab" onclick="filtrarProdutos('games', this)">Games</button>
+      <button class="filter-tab" onclick="filtrarProdutos('lifestyle', this)">Lifestyle</button>
+    </div>
+  </div>
+  <div class="produtos-grid" id="produtosGrid"></div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-header">
+    <div class="section-tag">✦ Fale com a gente</div>
+    <h2 class="section-title">Entre em contato</h2>
+  </div>
+
+  <div class="contato-grid">
+    <div class="contato-info">
+      <h3>Adoramos ouvir nossos clientes 💛</h3>
+      <p>Tem dúvida sobre alguma box, quer saber mais sobre os produtos ou precisa de ajuda com seu pedido? Manda mensagem!</p>
+
+      <div class="contato-detail">
+        <div class="contato-detail-icon">📧</div>
+        <div class="contato-detail-text">
+          <strong>Email</strong>
+          oi@abreereza.com.br
+        </div>
+      </div>
+      <div class="contato-detail">
+        <div class="contato-detail-icon">📱</div>
+        <div class="contato-detail-text">
+          <strong>WhatsApp</strong>
+          (11) 99999-0000
+        </div>
+      </div>
+      <div class="contato-detail">
+        <div class="contato-detail-icon">📍</div>
+        <div class="contato-detail-text">
+          <strong>Localização</strong>
+          São Paulo, SP – Brasil
+        </div>
+      </div>
+    </div>
+
+    <form id="contatoForm" onsubmit="enviarContato(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Nome</label>
+          <input type="text" id="contato-nome" placeholder="Seu nome completo" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="contato-email" placeholder="seu@email.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Assunto</label>
+        <select id="contato-assunto">
+          <option value="">Selecione um assunto</option>
+          <option value="pedido">Dúvida sobre pedido</option>
+          <option value="produto">Informações sobre produtos</option>
+          <option value="entrega">Entrega e rastreamento</option>
+          <option value="parceria">Parcerias</option>
+          <option value="outro">Outro</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensagem</label>
+        <textarea id="contato-mensagem" placeholder="Conta pra gente! 😊" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+        Enviar mensagem ✉️
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Abre<span>&</span>Reza</div>
+  <p>© 2025 Abre & Reza · Todos os direitos reservados</p>
+  <p style="font-size:0.75rem;">Feito com 🎁 em São Paulo</p>
+</footer>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <div class="toast-icon" id="toastIcon"></div>
+  <div>
+    <div class="toast-title" id="toastTitle"></div>
+    <div class="toast-msg" id="toastMsg"></div>
+  </div>
+</div>
+
+<!-- MODAL CARRINHO -->
+<div class="modal-overlay" id="cartModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>🛍️ Carrinho de compras</h3>
+      <div class="modal-close" onclick="closeCart()">✕</div>
+    </div>
+    <div class="modal-body" id="cartBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
