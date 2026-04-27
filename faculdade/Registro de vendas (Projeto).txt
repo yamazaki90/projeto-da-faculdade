@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    // Variáveis
+    char nome[50];
+    int senha, escolha, sorteio, opcao;
+
+    // Vetores
+    char itensJogos[5][50] = {
+        "Chaveiro tematico",
+        "Jogo",
+        "Fone",
+        "Mousepad",
+        "Poster"
+    };
+
+    char itensFilmes[5][50] = {
+        "Camiseta tematica",
+        "Poster de filme",
+        "Ingresso de cinema",
+        "Ingresso + pipoca",
+        "Blu-ray aleatorio"
+    };
+
+    char itensAnimes[5][50] = {
+        "Action figure",
+        "Manga",
+        "Chaveiro de anime",
+        "Poster de anime",
+        "3 meses de Crunchyroll"
+    };
+
+    char itensSeries[5][50] = {
+        "Camiseta de serie",
+        "Caneca tematica",
+        "Funko Pop",
+        "Poster",
+        "Chaveiro"
+    };
+
+    // Gerador aleatório para o sorteio do item
+    srand(time(NULL));
+
+    // Cadastro do usuário
+    printf("Cadastro obrigatorio, digite um nome para o usuário:\n");
+    scanf("%s", nome);
+
+    printf("Digite a senha desejada:\n");
+    scanf("%d", &senha);
+    
+
+    // Menu com as opções de ir para compra e sair
+    do {
+        printf("\n===== MENU =====\n");
+        printf("1 - Abrir caixa\n");
+        printf("2 - Sair\n");
+        scanf("%d", &opcao);
+
+        if(opcao == 1)
+        {
+            printf("\nSelecione uma das caixas:\n");
+            printf("1 - Jogos\n2 - Filmes\n3 - Animes/Desenhos\n4 - Series\n");
+            scanf("%d", &escolha);
+
+    switch(escolha)
+            {
+    case 1:
+        printf("Voce escolheu a caixa de Jogos!\n");
+
+       // Sorteio do item
+        sorteio = rand() % 5;
+
+        // Exibe item usando vetor
+        printf("Voce ganhou: %s\n", itensJogos[sorteio]);
+        break;
+
+    case 2:
+        printf("Voce escolheu a caixa de Filmes!\n");
+
+        sorteio = rand() % 5;
+        printf("Voce ganhou: %s\n", itensFilmes[sorteio]);
+        break;
+
+    case 3:
+        printf("Voce escolheu a caixa de Animes/Desenhos!\n");
+
+        sorteio = rand() % 5;
+        printf("Voce ganhou: %s\n", itensAnimes[sorteio]);
+        break;
+
+    case 4:
+        printf("Voce escolheu a caixa de Series!\n");
+
+        sorteio = rand() % 5;
+        printf("Voce ganhou: %s\n", itensSeries[sorteio]);
+        break;
+
+    default:
+        printf("Opção invalida!\n");
+            }
+        }
+
+    } while(opcao != 2); // Repete até a saida do usuário
+
+    printf("Programa encerrado.\n");
+    
+
+    return 0;
+}
