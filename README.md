@@ -9,16 +9,16 @@ O projeto **Abre & Reza** é um sistema de e-commerce de caixas surpresa desenvo
 
 ## 👥 Equipe
 
-| Nome | Função | Responsabilidades |
-| --- | --- | --- |
-| Alana Vitorino Guimarães | Engenheira de Frontend | Desenvolvimento da interface do site |
-| David Auleir de Lima Oliveira | CTO / Diretor de Tecnologia | Arquitetura do sistema e backend em C |
-| Guilherme Ferreira Sindice | Engenheiro de Dados | Modelagem e estrutura do banco de dados |
-| Gustavo Canevazzi da Silva | Engenheiro de Dados | Modelagem e estrutura do banco de dados |
-| Kaique Silva Neves | Product Lead | Gestão do produto e suporte ao backend |
-| Kleber Augusto Brilhante de Morais | Project Manager | Planejamento estratégico e documentação |
-| Mariana Batista de Paula Vieira | QA & Quality Manager | Garantia de qualidade e organização do projeto |
-| Thierry Fernando Magalhaes | Engenheiro de Dados | Modelagem e estrutura do banco de dados |
+| Nome                               | Função                      | Responsabilidades                              |
+| ---------------------------------- | --------------------------- | ---------------------------------------------- |
+| Alana Vitorino Guimarães           | Engenheira de Frontend      | Desenvolvimento da interface do site           |
+| David Auleir de Lima Oliveira      | CTO / Diretor de Tecnologia | Arquitetura do sistema e backend em C          |
+| Guilherme Ferreira Sindice         | Engenheiro de Dados         | Modelagem e estrutura do banco de dados        |
+| Gustavo Canevazzi da Silva         | Engenheiro de Dados         | Modelagem e estrutura do banco de dados        |
+| Kaique Silva Neves                 | Product Lead                | Gestão do produto e suporte ao backend         |
+| Kleber Augusto Brilhante de Morais | Project Manager             | Planejamento estratégico e documentação        |
+| Mariana Batista de Paula Vieira    | QA & Quality Manager        | Garantia de qualidade e organização do projeto |
+| Thierry Fernando Magalhaes         | Engenheiro de Dados         | Modelagem e estrutura do banco de dados        |
 
 ---
 
@@ -68,12 +68,12 @@ Funciona como SPA — todas as seções são navegadas sem recarregar a página.
 
 ### Seções
 
-| Âncora | Nome | Descrição |
-| --- | --- | --- |
-| `#home` | Início | Hero, estatísticas e chamadas para ação |
-| `#sobre` | Sobre | História, missão, seleção e entrega |
+| Âncora      | Nome     | Descrição                                 |
+| ----------- | -------- | ----------------------------------------- |
+| `#home`     | Início   | Hero, estatísticas e chamadas para ação   |
+| `#sobre`    | Sobre    | História, missão, seleção e entrega       |
 | `#produtos` | Produtos | Catálogo com filtros, carrinho e checkout |
-| `#contato` | Contato | Formulário e informações de contato |
+| `#contato`  | Contato  | Formulário e informações de contato       |
 
 ### Funcionalidades JavaScript (`script.js`)
 
@@ -96,13 +96,13 @@ Funciona como SPA — todas as seções são navegadas sem recarregar a página.
 
 ### Rotas da API
 
-| Método | Rota | Descrição |
-| --- | --- | --- |
-| `GET` | `/api/produtos` | Lista todos os produtos (`SELECT * FROM produtos`) |
-| `GET` | `/api/produtos/:id` | Busca produto por id (`SELECT ... WHERE id = ?`) |
-| `POST` | `/api/clientes` | Cadastra cliente (`INSERT INTO clientes`) |
-| `POST` | `/api/pedidos` | Registra pedido (`INSERT INTO pedidos`) |
-| `GET` | `/api/pedidos` | Lista pedidos com JOIN de clientes e produtos |
+| Método | Rota                | Descrição                                          |
+| ------ | ------------------- | -------------------------------------------------- |
+| `GET`  | `/api/produtos`     | Lista todos os produtos (`SELECT * FROM produtos`) |
+| `GET`  | `/api/produtos/:id` | Busca produto por id (`SELECT ... WHERE id = ?`)   |
+| `POST` | `/api/clientes`     | Cadastra cliente (`INSERT INTO clientes`)          |
+| `POST` | `/api/pedidos`      | Registra pedido (`INSERT INTO pedidos`)            |
+| `GET`  | `/api/pedidos`      | Lista pedidos com JOIN de clientes e produtos      |
 
 ### Características do servidor
 
@@ -142,14 +142,14 @@ Funciona como SPA — todas as seções são navegadas sem recarregar a página.
 
 ### Produtos cadastrados no seed
 
-| # | Nome | Categoria | Preço | Badge |
-| --- | --- | --- | --- | --- |
-| 1 | Caixa Tech Starter | Tecnologia | R$ 89,90 | Popular |
-| 2 | Caixa Gamer Pro | Games | R$ 149,90 | Hot |
-| 3 | Caixa Essenciais | Estilo de vida | R$ 99,90 | — |
-| 4 | Caixa Premium Ultra | Tecnologia | R$ 249,90 | Premium |
-| 5 | Caixa Kids Adventure | Estilo de vida | R$ 79,90 | Novo |
-| 6 | Caixa Colecionador | Games | R$ 189,90 | Exclusivo |
+| #   | Nome                 | Categoria      | Preço     | Badge     |
+| --- | -------------------- | -------------- | --------- | --------- |
+| 1   | Caixa Tech Starter   | Tecnologia     | R$ 89,90  | Popular   |
+| 2   | Caixa Gamer Pro      | Games          | R$ 149,90 | Hot       |
+| 3   | Caixa Essenciais     | Estilo de vida | R$ 99,90  | —         |
+| 4   | Caixa Premium Ultra  | Tecnologia     | R$ 249,90 | Premium   |
+| 5   | Caixa Kids Adventure | Estilo de vida | R$ 79,90  | Novo      |
+| 6   | Caixa Colecionador   | Games          | R$ 189,90 | Exclusivo |
 
 ---
 
@@ -235,20 +235,17 @@ ORDER BY total DESC;
 
 ## 📚 Disciplinas integradas
 
-| Disciplina | Aplicação no projeto |
-| --- | --- |
-| Desenvolvimento para Internet | Site HTML/CSS/JS com SPA, filtros, carrinho e formulário |
-| Algoritmos e Práticas de Programação | Servidor HTTP em C com API REST e integração MySQL |
-| Modelagem de Banco de Dados | DER com 3 entidades, chaves primárias/estrangeiras e cardinalidades |
-| Desenvolvimento em Banco de Dados | schema.sql, seed, scripts INSERT e consultas SELECT com JOIN |
+| Disciplina                           | Aplicação no projeto                                                |
+| ------------------------------------ | ------------------------------------------------------------------- |
+| Desenvolvimento para Internet        | Site HTML/CSS/JS com SPA, filtros, carrinho e formulário            |
+| Algoritmos e Práticas de Programação | Servidor HTTP em C com API REST e integração MySQL                  |
+| Modelagem de Banco de Dados          | DER com 3 entidades, chaves primárias/estrangeiras e cardinalidades |
+| Desenvolvimento em Banco de Dados    | schema.sql, seed, scripts INSERT e consultas SELECT com JOIN        |
 
 ---
 
 _UNINOVE — Projeto de Extensão em Desenvolvimento de Software — 2026_
+
 ```
 
-Se você quiser, eu posso agora montar a **versão final com tom mais acadêmico e formal**, mantendo exatamente o mesmo conteúdo.
-
-Fontes
-[1] Code-index.html-projeto-da-faculdade.jpeg https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/79762756/04f26bb2-d9ee-4605-99d9-ae4c54fea1e2/Code-index.html-projeto-da-faculdade.jpeg
-[2] doc_abreereza_v2.docx https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/79762756/397361eb-5ceb-4204-a2f6-765d10dddd2e/doc_abreereza_v2.docx
+```
