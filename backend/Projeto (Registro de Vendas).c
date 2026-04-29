@@ -3,6 +3,25 @@
 #include <time.h>
 #include <string.h>
 
+// ===== IDENTIFICAÇÃO DO GRUPO =====
+// Alana Vitorino Guimarães 
+// RA:3025105251
+// David Auleir de Lima Oliveira 
+// RA:3025106722
+// Gustavo canevazzi da Silva 
+// RA:3025102642
+// Guilherme Ferreira Sindice 
+// RA:3026102567
+// Kaique Silva Neves 
+// RA 3025105359
+// Kleber Augusto Brilhante de Morais
+// RA:3026105022
+// Mariana Batista de Paula Vieira 
+// RA: :3026105335
+// Thierry Fernando Magalhaes 
+// RA: 3026101894
+// Projeto: Sistema de Registro de Vendas em C (Abre & Reza)
+
 int main()
 {
     // Variáveis para armazenar o nome e a senha do cadastro e do login
